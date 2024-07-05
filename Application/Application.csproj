@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.9.2" />
+    <PackageReference Include="MediatR" Version="12.3.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.csproj" />
+    <ProjectReference Include="..\Fellowship\z.Fellowship.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Features\Abilities\Commands\Delete\" />
+    <Folder Include="Features\Pokemons\Commands\Create\" />
+    <Folder Include="Features\Pokemons\Commands\Delete\" />
+    <Folder Include="Features\Pokemons\Commands\Kill\" />
+    <Folder Include="Features\Pokemons\Commands\Update\" />
+    <Folder Include="Features\Pokemons\Constans\" />
+    <Folder Include="Features\Pokemons\Profiles\" />
+    <Folder Include="Features\Pokemons\Queries\" />
+    <Folder Include="Features\Pokemons\Rules\" />
+    <Folder Include="Features\Weaknesses\Commands\Create\" />
+    <Folder Include="Features\Weaknesses\Commands\Delete\" />
+    <Folder Include="Features\Weaknesses\Commands\Kill\" />
+    <Folder Include="Features\Weaknesses\Commands\Update\" />
+    <Folder Include="Features\Weaknesses\Constans\" />
+    <Folder Include="Features\Weaknesses\Profiles\" />
+    <Folder Include="Features\Weaknesses\Queries\" />
+    <Folder Include="Features\Weaknesses\Rules\" />
+    <Folder Include="Features\Abilities\Commands\Update\" />
+  </ItemGroup>
+
+</Project>
