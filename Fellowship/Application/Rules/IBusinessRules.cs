@@ -6,6 +6,6 @@ using System.Threading.Tasks;
 
 namespace z.Fellowship.Application.Rules;
 
-public class BaseBusinessRules : IBusinessRules
+public interface IBusinessRules
 {
 }

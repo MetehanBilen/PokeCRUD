@@ -3,17 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35004.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{E0D1751E-3245-41EA-BAA7-2B785EA15F20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{E0D1751E-3245-41EA-BAA7-2B785EA15F20}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Services\Infrastructure.csproj", "{07E22E48-691E-4FC7-9251-B054FEDFA31F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Services\Infrastructure.csproj", "{07E22E48-691E-4FC7-9251-B054FEDFA31F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{F24F1642-1F96-4415-A261-324264FAE659}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{F24F1642-1F96-4415-A261-324264FAE659}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "Persistence\Persistence.csproj", "{8F54A8DA-0069-4F16-AA39-FB4EB209A1A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistence", "Persistence\Persistence.csproj", "{8F54A8DA-0069-4F16-AA39-FB4EB209A1A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{FF7575D9-2D43-4D30-A74F-AF5DC59F6A34}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "WebApi\WebApi.csproj", "{FF7575D9-2D43-4D30-A74F-AF5DC59F6A34}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "z.Fellowship", "Fellowship\z.Fellowship.csproj", "{F4D0EF52-81A5-4CBE-AA90-B65DDCCD1AC1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "z.Fellowship", "Fellowship\z.Fellowship.csproj", "{F4D0EF52-81A5-4CBE-AA90-B65DDCCD1AC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokeCRUD.Tests", "PokeCRUD.Tests\PokeCRUD.Tests.csproj", "{D7F7A064-6258-44BF-A027-D018F68EC27E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{F4D0EF52-81A5-4CBE-AA90-B65DDCCD1AC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4D0EF52-81A5-4CBE-AA90-B65DDCCD1AC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4D0EF52-81A5-4CBE-AA90-B65DDCCD1AC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7F7A064-6258-44BF-A027-D018F68EC27E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7F7A064-6258-44BF-A027-D018F68EC27E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7F7A064-6258-44BF-A027-D018F68EC27E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7F7A064-6258-44BF-A027-D018F68EC27E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

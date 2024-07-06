@@ -37,7 +37,7 @@ public class CreateAbilityCommand : IRequest <CreatedAbilityResponse>
         public async Task<CreatedAbilityResponse>? Handle(CreateAbilityCommand request, CancellationToken cancellationToken)
         {
 
-            await _abilityBusinessRules.AbilityNameCannotBeDuplicatedWhenInserted(request.Name);
+             _abilityBusinessRules.AbilityNameCannotBeDuplicatedWhenInserted(request.Name);
 
 
 

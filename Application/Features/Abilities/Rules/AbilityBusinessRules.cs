@@ -21,12 +21,13 @@ public class AbilityBusinessRules : BaseBusinessRules
     }
 
     //Rule One
-    public async   Task AbilityNameCannotBeDuplicatedWhenInserted(string name)
+    public void AbilityNameCannotBeDuplicatedWhenInserted(string name)
     {
-        Ability? result = await _abilityRepository.GetAsync(predicate: a => a.Name.ToLower() == name.ToLower());
+        Ability? result =  _abilityRepository.Get( a => a.Name.ToLower() == name.ToLower());
         if (result != null)
         {
             throw new BusinessException(AbilitiesMessages.AbilityNameExists);
         }
+       
     }
 }
