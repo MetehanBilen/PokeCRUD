@@ -30,4 +30,14 @@ public class AbilityBusinessRules : BaseBusinessRules
         }
        
     }
+
+    public async Task AbilityNameCannotBeDuplicatedWhenInsertedAsync(string name)
+    {
+        Ability? result = await _abilityRepository.GetAsync(a => a.Name.ToLower() == name.ToLower());
+        if (result != null)
+        {
+            throw new BusinessException(AbilitiesMessages.AbilityNameExists);
+        }
+
+    }
 }

@@ -37,8 +37,8 @@ public class CreateAbilityCommand : IRequest <CreatedAbilityResponse>
         public async Task<CreatedAbilityResponse>? Handle(CreateAbilityCommand request, CancellationToken cancellationToken)
         {
 
-             _abilityBusinessRules.AbilityNameCannotBeDuplicatedWhenInserted(request.Name);
-
+            // _abilityBusinessRules.AbilityNameCannotBeDuplicatedWhenInserted(request.Name);
+            _abilityBusinessRules.AbilityNameCannotBeDuplicatedWhenInsertedAsync(request.Name);
 
 
             Ability ability = _mapper.Map<Ability>(request);
