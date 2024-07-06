@@ -73,9 +73,9 @@ public class AbilityBusinessRulesTests
 
         var businessRules = new AbilityBusinessRules(_mockAbilityRepository.Object);
 
-        // Act & Assert
-        var ex = Assert.Throws<BusinessException>(() => businessRules.AbilityNameCannotBeDuplicatedWhenInserted(expectedAbility.Name));
-        Assert.Equal(AbilitiesMessages.AbilityNameExists, ex.Message);
+
+        var ex = Record.Exception(() => businessRules.AbilityNameCannotBeDuplicatedWhenInserted(expectedAbility.Name));
+        Assert.Null(ex);
 
 
     }

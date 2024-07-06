@@ -62,8 +62,18 @@ public class CreateAbilityCommandHandlerTests
             Info = command.Info,
         };
 
-        Expression<Func<Ability, bool>> predicate = e => e.Name == command.Name;
-        _mockAbilityRepository.Setup(x => x.Get(predicate));
+        _mockAbilityRepository.Setup(repo => repo.Get(It.IsAny<Expression<Func<Ability, bool>>>()))
+                       .Returns<Expression<Func<Ability, bool>>>(filter => {
+                           // Simulate repository behavior
+                           var abilities = new List<Ability>
+                           {
+                              new Ability { Id = new Guid(), Name = "Water Something" },
+                              new Ability { Id = new Guid(), Name = "Healing Touch" }
+                              // Add more abilities as needed
+                           };
+                           return abilities.SingleOrDefault(filter.Compile());
+                       });
+
         _mockMapper.Setup(x => x.Map<Ability>(command)).Returns(ability);
 
 
