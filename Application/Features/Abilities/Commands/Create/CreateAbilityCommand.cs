@@ -8,10 +8,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using z.Fellowship.Application.Logging;
 
 namespace Application.Features.Abilities.Commands.Create;
 
-public class CreateAbilityCommand : IRequest <CreatedAbilityResponse>
+public class CreateAbilityCommand : IRequest <CreatedAbilityResponse> ,ILoggableRequest
 {
     public string Name { get; set; }
     public string Info { get; set; }

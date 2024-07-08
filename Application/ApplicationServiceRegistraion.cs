@@ -8,6 +8,10 @@ using System.Reflection;
 using z.Fellowship.Application.Rules;
 using z.Fellowship.Application.Pipelines.Validation;
 using FluentValidation;
+using Microsoft.Extensions.Configuration;
+using z.Fellowship.Application.Logging;
+using z.Fellowship.CrossCuttingConcerns.Serilog.Logger;
+using z.Fellowship.CrossCuttingConcerns.Serilog;
 
 namespace Application;
 
@@ -29,10 +33,13 @@ public static class ApplicationServiceRegistraion
             configuration.AddOpenBehavior(typeof(RequestValidationBehavior<,>));
 
 
+            configuration.AddOpenBehavior(typeof(LoggingBehavior<,>));
+
+
         });
 
-
-    return services; 
+        services.AddSingleton<LoggerServiceBase, RabbitMQLogger>();
+        return services; 
     }
 
     public static IServiceCollection AddSubClassesOfType(
